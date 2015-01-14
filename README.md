@@ -1,9 +1,9 @@
 # ParentChildGrailsCriteriaExample
 An example project that illustrates how to use a hibernate/Grails Criteria Query using a Parent -hasMany- Child example
 
-# This example is given for an answer to a StackOverflow.com question: http://stackoverflow.com/questions/27703377/grails-criteria-query-return-empty-result/27743852?noredirect=1#comment44193820_27743852
+This example is given for an answer to a StackOverflow.com question: http://stackoverflow.com/questions/27703377/grails-criteria-query-return-empty-result/27743852?noredirect=1#comment44193820_27743852
 
-The logical 'or' tries to find the union between the two queries.
+#####The logical 'or' tries to find the union between the two queries.
 
 Project Grails Version:  Grails 2.3.0
 IDE: Intellij 14.0.2
@@ -99,17 +99,17 @@ ________________________________________________________________________________
 Output: All Parents with all child will be returned because all children fulfill the criteria.
 ______________________________________________________________________________________________________________
 
-The list of parents who have boys with height > 180 AND girls with height < 150
-Parent Name: First Parent
-Children
-Child Id: 1 Child Height: 170 Child gender: 1
-Child Id: 2 Child Height: 175 Child gender: 1
-Child Id: 5 Child Height: 160 Child gender: 2
-Parent Name: Second Parent
-Children
-Child Id: 3 Child Height: 168 Child gender: 1
-Child Id: 6 Child Height: 170 Child gender: 2
-Parent Name: Third Parent
-Children
-Child Id: 4 Child Height: 159 Child gender: 1
-Child Id: 7 Child Height: 178 Child gender: 2
+The list of parents who have boys with height > 180 AND girls with height < 150   
+Parent Name: First Parent   
+Children   
+Child Id: 1 Child Height: 170 Child gender: 1   
+Child Id: 2 Child Height: 175 Child gender: 1   
+Child Id: 5 Child Height: 160 Child gender: 2   
+Parent Name: Second Parent   
+Children   
+Child Id: 3 Child Height: 168 Child gender: 1   
+Child Id: 6 Child Height: 170 Child gender: 2   
+Parent Name: Third Parent   
+Children   
+Child Id: 4 Child Height: 159 Child gender: 1   
+Child Id: 7 Child Height: 178 Child gender: 2   
