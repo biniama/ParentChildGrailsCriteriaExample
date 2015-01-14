@@ -9,43 +9,34 @@ class PersonController {
 
   def returnParents() {
 
-      List<Parent> parents = Parent.createCriteria().list {
-          childs {
-              or {
-                  and {
-                      eq("gender", 2)
-                      ge("height", 150)
-                  }
-                  and {
-                      eq("gender", 1)
-                      le("height", 180)
+      List<Parent> parents = Parent.createCriteria().listDistinct {
+          and {
+              childs {
+                  or {
+                      and {
+                          eq("gender", 2)
+                          ge("height", 150)
+                      }
+                      and {
+                          eq("gender", 1)
+                          le("height", 180)
+                      }
                   }
               }
-        }
-      }
-
-
-   /*   parents.each { parent ->
-
-          println parent
-          println parent.childs.childId
-
-          println "Parent Name: " + parent.name
-          parents.childs.each { child ->
-
-              println "Parent Id: " + child.parent + " Child Id: " + child.childId + " Child Height: " + child.height + " Child gender: " + child.gender
           }
       }
-      println "**************************"
 
-      parents.childs.each { child ->
+      println "The list of parents who have boys with height > 180 AND girls with height < 150"
 
-          println "Child Id: " + child.childId + " Child Height: " + child.height + " Child gender: " + child.gender
-      }*/
+      parents.each { parent ->
 
-      parents.childs.each { child ->
+          println "Parent Name: " + parent.name
+          println "Children"
 
-          println "Parent Id: " + child.parent.id + " Child Id: " + child.childId + " Child Height: " + child.height + " Child gender: " + child.gender
+          parent.childs.each { child ->
+
+              println "Child Id: " + child.childId + " Child Height: " + child.height + " Child gender: " + child.gender
+          }
       }
   }
 }
